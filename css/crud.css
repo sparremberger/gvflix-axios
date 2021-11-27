@@ -1,0 +1,174 @@
+:root {
+    --cor-gvdasa: #018983;
+    --gradiente: ;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #e0e0e0;
+    height: min-content;
+    padding:5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#crud {
+    width: 50vw;
+    height: min-content;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+table,
+td,
+tr,
+th {
+ 
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+
+
+
+hr {
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+
+td {
+    background-color: white;
+}
+
+
+tbody tr:nth-child(even) > td {
+    background-color: #f2f2f2;
+
+}
+
+th {
+    background-color: grey;
+    color: white;
+    font-weight: 300;
+}
+.tabela {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-collapse: collapse !important;
+    
+}
+
+.tabela tr:hover td{
+    background-color: #ffff99 !important;
+  }
+
+.selected {
+    background-color: #ffff99 !important;
+}
+
+button {
+    /*background-color: none;*/
+    border: none;
+    background-color: #e0e0e0;
+    color: var(--cor-gvdasa);
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+.primary {
+    background-color: var(--cor-gvdasa);
+    border: none;
+    color: white;
+    font-weight: unset;
+}
+
+form {
+    position: relative;
+    width:80%;
+}
+input {
+    border: 1px solid rgb(124, 124, 124);
+    border-radius: 4px;
+    padding: 10px;
+    width:60%;
+}
+input:focus {
+    border: 2px solid #018983 !important;
+    outline: none;
+}
+
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+#retornarButton {
+    color: grey;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+#retornarButton:hover {
+    background-color: var(--cor-gvdasa);
+    color: white !important;
+}
+
+.submit {
+    width:30%;
+    margin-left:35%;
+    margin-right:35%;
+    margin-top:20px;
+}
+
+#post, #put, #remove {
+    display:none;
+    flex-direction:column;
+}
+
+
+#put_id {
+    background-color: rgb(231, 231, 231);
+}
+
+#error_put, #error_post, #error_delete {
+    display:none;
+    color:red;
+}
+
+#success_put, #success_post, #success_delete {
+    display:none;
+    color:green;
+    font-weight: bold;
+}

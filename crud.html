@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/crud.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
+    ></script>
+
+    <script src="./javascript/crud.js" defer></script>
+
+    <title>GVFlix</title>
+  </head>
+  <body>
+    <section id="crud">
+      <div class="form">
+        <h1>Filmes disponíveis</h1>
+        <form>
+          <input
+            type="text"
+            id="filter"
+            name="filter"
+            placeholder="Digite o nome de um filme..."
+            
+          />
+         
+        </form>
+        <table class="tabela">
+          <thead>
+            <tr onclick="test()">
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Ano</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div>
+          <button
+            type="button"
+            class="primary"
+            id="novo"
+            onclick="showForm('post')"
+          >
+            NOVO
+          </button>
+          <button type="button" id="editar" onclick="showForm('put')">
+            EDITAR
+          </button>
+          <button type="button" id="excluir" onClick="showForm('remove')">EXCLUIR</button>
+          <a href="index.html"><button id="retornarButton">Retornar</button></a>
+        </div>
+        <div id="post">
+          <p>Insira um novo filme:</p>
+          <label for="filmenome">Nome:</label>
+          <input type="text" id="filmenome" name="filmenome" /><br />
+          <label for="filmeano">Ano:</label>
+          <input type="text" id="filmeano" name="filmeano" /><br />
+          <p id="error_post">
+            Os campos "nome" e "ano" estão vazios ou contém dados inválidos.
+          </p>
+          <p id="success_post">Sucesso.</p>
+          <button type="button" class="primary submit" onclick="postFilme()">
+            ENVIAR
+          </button>
+        </div>
+        <div id="put">
+          <p>Modifique os dados do filme:</p>
+          <label for="put_id">ID:</label>
+          <input type="text" id="put_id" name="put_id" readonly /><br />
+          <label for="put_nome">Nome:</label>
+          <input type="text" id="put_nome" name="put_nome" /><br />
+          <label for="put_ano">Ano:</label>
+          <input type="text" id="put_ano" name="put_ano" /><br />
+          <p id="error_put">Os campos "nome" e "ano" não podem estar vazios.</p>
+          <p id="success_put">Sucesso.</p>
+          <button type="button" class="primary submit" onclick="putFilme()">
+            ENVIAR
+          </button>
+        </div>
+        <div id="remove">
+          <p id="error_delete">Nenhum filme selecionado.</p>
+          <p id="success_delete">Sucesso.</p>
+          <p>Selecione um filme que deseja excluir</p>
+          <button type="button" class="primary submit" onclick="deleteFilme()">
+            EXCLUIR
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

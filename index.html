@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GVFlix</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+            integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="./javascript/index.js" defer></script>
+    </head>
+    <body>
+        <div class="maincard" id="maincard">
+            <a href="crud.html">
+                <button type="button" class="primary">Editar</button></a
+            >
+            <div class="image">
+                <img src="./images/poster_1.jpg" id="main_image" />
+            </div>
+            <div class="controls">
+                <div class="previous-button button">
+                    <i
+                        class="fas fa-arrow-left"
+                        onClick="previousMovie(this)"
+                    ></i>
+                </div>
+                <div class="play-button button">
+                    <i class="fas fa-pause" onClick="pausePreview(this)"></i>
+                </div>
+                <div class="next-button button">
+                    <i class="fas fa-arrow-right" onClick="nextMovie()"></i>
+                </div>
+            </div>
+        </div>
+        <div class="strip">
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_1.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_2.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_3.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_4.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_5.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_6.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_7.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_8.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_9.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_10.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_11.jpg" alt="" srcset="" />
+            </div>
+            <div class="card" onClick="changeMovieOnClick(this)">
+                <img src="./images/poster_13.jpg" alt="" srcset="" />
+            </div>
+        </div>
+    </body>
+</html>
